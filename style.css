@@ -81,6 +81,16 @@ body {
     transition: background-color var(--transition-normal), color var(--transition-normal);
 }
 
+#bg-canvas {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    z-index: -1;
+    pointer-events: none;
+}
+
 ::selection {
     background-color: var(--selection-bg);
     color: var(--selection-color);
