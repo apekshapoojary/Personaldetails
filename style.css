@@ -409,6 +409,7 @@ a {
     height: 300px;
     border-radius: var(--border-radius-round);
     object-fit: cover;
+    object-position: top;
     border: 4px solid var(--glass-border);
     background: var(--bg-secondary);
     box-shadow: var(--card-shadow);
