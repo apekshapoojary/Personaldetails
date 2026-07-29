@@ -1,0 +1,442 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Personal Profile Website of Apeksha D Poojary - Web Developer & BCA Student. Explore projects, skills, certifications, and contact details.">
+    <title>Apeksha D Poojary | Personal Portfolio</title>
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    
+    <!-- Font Awesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="style.css">
+</head>
+<body class="dark-theme">
+    <!-- Navigation Bar -->
+    <header class="header">
+        <div class="container navbar-container">
+            <a href="#" class="logo" id="nav-logo">Apeksha<span>.</span></a>
+            <nav class="navbar" id="navbar">
+                <a href="#home" class="nav-link active">Home</a>
+                <a href="#about" class="nav-link">About</a>
+                <a href="#skills" class="nav-link">Skills</a>
+                <a href="#projects" class="nav-link">Projects</a>
+                <a href="#education-certs" class="nav-link">Education</a>
+                <a href="#contact" class="nav-link">Contact</a>
+            </nav>
+            <div class="nav-actions">
+                <button id="theme-toggle" class="theme-toggle-btn" aria-label="Toggle light/dark theme">
+                    <i class="fa-solid fa-moon"></i>
+                </button>
+                <button class="hamburger-menu" id="hamburger-menu" aria-label="Open menu">
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <!-- Hero Section -->
+        <section id="home" class="hero-section">
+            <div class="container hero-container">
+                <div class="hero-content">
+                    <span class="subtitle">Welcome to my portfolio</span>
+                    <h1 class="hero-title">Hi, I'm <span class="highlight">Apeksha D Poojary</span></h1>
+                    <h2 class="hero-tagline">Web Developer & BCA Student</h2>
+                    <p class="hero-description">
+                        Detail-oriented developer with a strong foundation in modern CSS methodologies, responsive design, and full-stack backend application logic. Passionate about engineering high-performance, user-friendly solutions.
+                    </p>
+                    <div class="hero-buttons">
+                        <a href="#contact" class="btn btn-primary" id="hero-cta-contact">Get In Touch</a>
+                        <a href="#projects" class="btn btn-secondary" id="hero-cta-projects">View My Work</a>
+                    </div>
+                </div>
+                <div class="hero-image-wrapper">
+                    <div class="avatar-glow"></div>
+                    <img src="assets/avatar.png" alt="Apeksha D Poojary Illustration" class="avatar-img" id="hero-avatar">
+                </div>
+            </div>
+        </section>
+
+        <!-- About Section -->
+        <section id="about" class="about-section">
+            <div class="container">
+                <div class="section-header">
+                    <span class="section-tag">About Me</span>
+                    <h2 class="section-title">Who is Apeksha?</h2>
+                </div>
+                <div class="about-grid">
+                    <div class="about-info-card">
+                        <h3>Professional Summary</h3>
+                        <p>
+                            I am a Computer Applications student at Dr. BB Hegde First Grade College, expected to graduate in June 2027. My technical foundation spans building dynamic front-end web interfaces alongside robust backend application logic and REST APIs.
+                        </p>
+                        <p>
+                            I have a proven ability to implement Agile principles, solve complex algorithmic challenges, and ensure high database reliability using SQL and NoSQL storage systems. I aim to create technology that makes a positive, real-world impact.
+                        </p>
+                        <div class="personal-details-list">
+                            <div class="detail-item">
+                                <i class="fa-solid fa-location-dot"></i>
+                                <span>Based in <strong>Udupi, India</strong></span>
+                            </div>
+                            <div class="detail-item">
+                                <i class="fa-solid fa-graduation-cap"></i>
+                                <span>Pursuing <strong>Bachelor of Computer Applications (BCA)</strong></span>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+        <!-- Skills Section -->
+        <section id="skills" class="skills-section">
+            <div class="container">
+                <div class="section-header">
+                    <span class="section-tag">Capabilities</span>
+                    <h2 class="section-title">My Technical Stack</h2>
+                </div>
+                <div class="skills-grid">
+                    <!-- Frontend Design -->
+                    <div class="skills-category-card">
+                        <div class="category-icon-header">
+                            <i class="fa-solid fa-code"></i>
+                            <h3>Frontend & Design</h3>
+                        </div>
+                        <div class="skills-list">
+                            <div class="skill-tag-item"><i class="fa-brands fa-html5"></i> HTML5</div>
+                            <div class="skill-tag-item"><i class="fa-brands fa-css3-alt"></i> CSS3</div>
+                            <div class="skill-tag-item"><i class="fa-brands fa-js"></i> JavaScript</div>
+                            <div class="skill-tag-item"><i class="fa-brands fa-bootstrap"></i> Bootstrap</div>
+                            <div class="skill-tag-item"><i class="fa-solid fa-paint-brush"></i> BEM/OOCSS</div>
+                            <div class="skill-tag-item"><i class="fa-solid fa-mobile-screen-button"></i> Responsive Web Design</div>
+                            <div class="skill-tag-item"><i class="fa-solid fa-wand-magic-sparkles"></i> CSS Animations & Transitions</div>
+                        </div>
+                    </div>
+
+                    <!-- Programming & Backend -->
+                    <div class="skills-category-card">
+                        <div class="category-icon-header">
+                            <i class="fa-solid fa-server"></i>
+                            <h3>Programming & Backend</h3>
+                        </div>
+                        <div class="skills-list">
+                            <div class="skill-tag-item"><i class="fa-brands fa-python"></i> Python</div>
+                            <div class="skill-tag-item"><i class="fa-solid fa-flask"></i> Flask</div>
+                            <div class="skill-tag-item"><i class="fa-brands fa-java"></i> Java</div>
+                            <div class="skill-tag-item"><i class="fa-solid fa-cloud-arrow-down"></i> REST APIs</div>
+                            <div class="skill-tag-item"><i class="fa-solid fa-cubes"></i> Object-Oriented Programming (OOP)</div>
+                        </div>
+                    </div>
+
+                    <!-- Databases & Cloud -->
+                    <div class="skills-category-card">
+                        <div class="category-icon-header">
+                            <i class="fa-solid fa-database"></i>
+                            <h3>Databases & Cloud</h3>
+                        </div>
+                        <div class="skills-list">
+                            <div class="skill-tag-item"><i class="fa-solid fa-table"></i> SQL</div>
+                            <div class="skill-tag-item"><i class="fa-solid fa-network-wired"></i> Schema Design</div>
+                            <div class="skill-tag-item"><i class="fa-solid fa-fire"></i> Firebase</div>
+                            <div class="skill-tag-item"><i class="fa-solid fa-leaf"></i> MongoDB</div>
+                            <div class="skill-tag-item"><i class="fa-solid fa-file-code"></i> JSON/SQL Storage</div>
+                        </div>
+                    </div>
+
+                    <!-- Tools & Methodologies -->
+                    <div class="skills-category-card">
+                        <div class="category-icon-header">
+                            <i class="fa-solid fa-screwdriver-wrench"></i>
+                            <h3>Tools & Methodologies</h3>
+                        </div>
+                        <div class="skills-list">
+                            <div class="skill-tag-item"><i class="fa-solid fa-person-running"></i> Agile Development</div>
+                            <div class="skill-tag-item"><i class="fa-brands fa-git-alt"></i> Git</div>
+                            <div class="skill-tag-item"><i class="fa-brands fa-github"></i> GitHub</div>
+                            <div class="skill-tag-item"><i class="fa-solid fa-terminal"></i> VS Code</div>
+                            <div class="skill-tag-item"><i class="fa-brands fa-linux"></i> Linux</div>
+                            <div class="skill-tag-item"><i class="fa-solid fa-brain"></i> Problem Solving</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Projects Section -->
+        <section id="projects" class="projects-section">
+            <div class="container">
+                <div class="section-header">
+                    <span class="section-tag">My Work</span>
+                    <h2 class="section-title">Featured Projects</h2>
+                </div>
+                <div class="projects-grid">
+                    <!-- Project 1: Academic Event Portal -->
+                    <div class="project-card">
+                        <div class="project-banner gradient-blue">
+                            <span class="project-category">Full-Stack Web App</span>
+                            <div class="project-tech-icons">
+                                <i class="fa-brands fa-html5"></i>
+                                <i class="fa-brands fa-js"></i>
+                                <i class="fa-brands fa-python"></i>
+                                <i class="fa-solid fa-database"></i>
+                            </div>
+                        </div>
+                        <div class="project-details">
+                            <h3>Academic Event Portal <span class="project-sub">(Event Management)</span></h3>
+                            <p class="project-summary">A full-stack, responsive event scheduling and management web platform for educational institutions.</p>
+                            <ul class="project-bullet-points">
+                                <li>Architected and engineered using Flask REST APIs and SQL, accelerating campus event scheduling speed by 40%.</li>
+                                <li>Designed responsive Bootstrap structures and custom cards with CSS mesh gradients, improving user engagement by 25%.</li>
+                                <li>Structured dynamic registration forms with JS and database concurrency control, ensuring zero data loss.</li>
+                                <li>Deployed to Firebase Hosting with continuous integration from Git/Linux environments.</li>
+                            </ul>
+                            <div class="project-tech-tags">
+                                <span>HTML5</span>
+                                <span>CSS3</span>
+                                <span>JavaScript</span>
+                                <span>Bootstrap</span>
+                                <span>Flask</span>
+                                <span>REST APIs</span>
+                                <span>SQL</span>
+                                <span>Firebase</span>
+                            </div>
+                            <div class="project-links">
+                                <a href="https://github.com/apekshapoojary/academic-event-portal" target="_blank" rel="noopener noreferrer" class="project-link-btn" id="p1-git"><i class="fa-brands fa-github"></i> Code</a>
+                                <a href="https://academic-event-portal.web.app" target="_blank" rel="noopener noreferrer" class="project-link-btn" id="p1-live"><i class="fa-solid fa-arrow-up-right-from-square"></i> Live Demo</a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Project 2: YouTube Manager System -->
+                    <div class="project-card">
+                        <div class="project-banner gradient-purple">
+                            <span class="project-category">Console / System Tool</span>
+                            <div class="project-tech-icons">
+                                <i class="fa-brands fa-python"></i>
+                                <i class="fa-solid fa-gears"></i>
+                                <i class="fa-solid fa-leaf"></i>
+                                <i class="fa-solid fa-file-lines"></i>
+                            </div>
+                        </div>
+                        <div class="project-details">
+                            <h3>YouTube Manager System</h3>
+                            <p class="project-summary">A modular python video management system supporting hybrid data persistence models.</p>
+                            <ul class="project-bullet-points">
+                                <li>Developed custom CRUD operations leveraging OOP principles in Python, improving data retrieval efficiency by 35%.</li>
+                                <li>Implemented a dual-persistence layer allowing seamless fallback between SQL database and MongoDB/JSON file storage.</li>
+                                <li>Guaranteed 99.9% data reliability with robust exception handling and input validation in VS Code under Linux.</li>
+                            </ul>
+                            <div class="project-tech-tags">
+                                <span>Python</span>
+                                <span>OOP</span>
+                                <span>Flask</span>
+                                <span>SQL</span>
+                                <span>MongoDB</span>
+                                <span>JSON</span>
+                                <span>Linux</span>
+                            </div>
+                            <div class="project-links">
+                                <a href="https://github.com/apekshapoojary/youtube-manager" target="_blank" rel="noopener noreferrer" class="project-link-btn" id="p2-git"><i class="fa-brands fa-github"></i> Code</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Education & Certifications Section -->
+        <section id="education-certs" class="education-certs-section">
+            <div class="container">
+                <div class="timeline-grid">
+                    <!-- Education Column -->
+                    <div class="education-col">
+                        <div class="section-header-small">
+                            <i class="fa-solid fa-graduation-cap"></i>
+                            <h2>Education</h2>
+                        </div>
+                        <div class="timeline">
+                            <div class="timeline-item">
+                                <div class="timeline-dot"></div>
+                                <span class="timeline-date">2024 - 2027 (Expected)</span>
+                                <h3>Bachelor of Computer Applications (BCA)</h3>
+                                <h4 class="timeline-subtitle">Dr. BB Hegde First Grade College, Kundapura</h4>
+                                <ul class="timeline-bullets">
+                                    <li><strong>Academic Excellence:</strong> Scored 100/100 marks in Mathematics course.</li>
+                                    <li><strong>Extracurricular:</strong> Active participant in the State Level NSS Camp.</li>
+                                </ul>
+                            </div>
+                            <div class="timeline-item">
+                                <div class="timeline-dot"></div>
+                                <span class="timeline-date">Completed</span>
+                                <h3>Pre-University Course (PUC Science)</h3>
+                                <h4 class="timeline-subtitle">Viveka Junior College, Kota, Udupi</h4>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Certifications Column -->
+                    <div class="certs-col">
+                        <div class="section-header-small">
+                            <i class="fa-solid fa-award"></i>
+                            <h2>Certifications</h2>
+                        </div>
+                        <div class="certs-list">
+                            <div class="cert-card">
+                                <div class="cert-icon"><i class="fa-solid fa-certificate"></i></div>
+                                <div class="cert-info">
+                                    <h3>AI Fundamentals</h3>
+                                    <span>IBM SkillsBuild</span>
+                                </div>
+                            </div>
+                            <div class="cert-card">
+                                <div class="cert-icon"><i class="fa-solid fa-certificate"></i></div>
+                                <div class="cert-info">
+                                    <h3>Lifelong Professional Skills</h3>
+                                    <span>IBM SkillsBuild</span>
+                                </div>
+                            </div>
+                            <div class="cert-card">
+                                <div class="cert-icon"><i class="fa-solid fa-certificate"></i></div>
+                                <div class="cert-info">
+                                    <h3>Introduction to Cloud Computing</h3>
+                                    <span>Infosys Springboard</span>
+                                </div>
+                            </div>
+                            <div class="cert-card">
+                                <div class="cert-icon"><i class="fa-solid fa-certificate"></i></div>
+                                <div class="cert-info">
+                                    <h3>Google Cloud Generative AI Leader</h3>
+                                    <span>Google Cloud</span>
+                                </div>
+                            </div>
+                            <div class="cert-card">
+                                <div class="cert-icon"><i class="fa-solid fa-certificate"></i></div>
+                                <div class="cert-info">
+                                    <h3>Data Analytics Job Simulation</h3>
+                                    <span>Deloitte Australia (Forage)</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Languages Section -->
+        <section id="languages" class="languages-section">
+            <div class="container">
+                <div class="languages-grid">
+                    <div class="lang-text-col">
+                        <span class="section-tag">Communication</span>
+                        <h2 class="section-title">Languages</h2>
+                        <p>Comfortable writing, presenting, and collaborating in multiple languages across global teams.</p>
+                    </div>
+                    <div class="lang-bars-col">
+                        <div class="lang-item">
+                            <div class="lang-info">
+                                <span>English</span>
+                                <span>Professional (B2)</span>
+                            </div>
+                            <div class="progress-bar-bg">
+                                <div class="progress-bar-fill fill-80"></div>
+                            </div>
+                        </div>
+                        <div class="lang-item">
+                            <div class="lang-info">
+                                <span>Kannada</span>
+                                <span>Native / Fluent (B2)</span>
+                            </div>
+                            <div class="progress-bar-bg">
+                                <div class="progress-bar-fill fill-100"></div>
+                            </div>
+                        </div>
+                        <div class="lang-item">
+                            <div class="lang-info">
+                                <span>Hindi</span>
+                                <span>Intermediate (A2)</span>
+                            </div>
+                            <div class="progress-bar-bg">
+                                <div class="progress-bar-fill fill-60"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Contact Section -->
+        <section id="contact" class="contact-section">
+            <div class="container">
+                <div class="section-header">
+                    <span class="section-tag">Let's Connect</span>
+                    <h2 class="section-title">Contact Details</h2>
+                </div>
+                <div class="contact-grid">
+                    <div class="contact-info">
+                        <h3>Get in touch!</h3>
+                        <p>Feel free to reach out for project collaborations, software development internships, or technical inquiries. I am always open to new opportunities.</p>
+                        
+                        <div class="contact-details">
+                            <a href="mailto:apekshapoojary755@gmail.com" class="contact-link" id="contact-email-link">
+                                <div class="contact-icon-box"><i class="fa-solid fa-envelope"></i></div>
+                                <div class="contact-detail-text">
+                                    <span>Email me</span>
+                                    <strong>apekshapoojary755@gmail.com</strong>
+                                </div>
+                            </a>
+                            <a href="tel:+918867423869" class="contact-link" id="contact-phone-link">
+                                <div class="contact-icon-box"><i class="fa-solid fa-phone"></i></div>
+                                <div class="contact-detail-text">
+                                    <span>Call me</span>
+                                    <strong>+91 8867423869</strong>
+                                </div>
+                            </a>
+                            <div class="contact-link">
+                                <div class="contact-icon-box"><i class="fa-solid fa-location-dot"></i></div>
+                                <div class="contact-detail-text">
+                                    <span>Location</span>
+                                    <strong>Udupi, Karnataka, India</strong>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="social-links-wrapper">
+                            <h3>Find me on</h3>
+                            <div class="social-links">
+                                <a href="https://www.linkedin.com/in/apeksha-10b9a7328/" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn Profile" id="social-linkedin"><i class="fa-brands fa-linkedin-in"></i></a>
+                                <a href="https://github.com/apekshapoojary" target="_blank" rel="noopener noreferrer" aria-label="GitHub Profile" id="social-github"><i class="fa-brands fa-github"></i></a>
+                            </div>
+                        </div>
+                    </div>
+
+
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container footer-container">
+            <p>&copy; 2026 Apeksha D Poojary. All rights reserved.</p>
+            <p class="credits">Designed & Developed with <i class="fa-solid fa-heart"></i></p>
+            <a href="#home" class="back-to-top" id="back-to-top-btn" aria-label="Back to top">
+                <i class="fa-solid fa-arrow-up"></i>
+            </a>
+        </div>
+    </footer>
+
+    <!-- Custom JavaScript -->
+    <script src="script.js"></script>
+</body>
+</html>
