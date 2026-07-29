@@ -89,6 +89,22 @@ body {
     height: 100vh;
     z-index: -1;
     pointer-events: none;
+    background-image: 
+        radial-gradient(circle at 20% 20%, rgba(0, 242, 254, 0.04) 0%, transparent 45%),
+        radial-gradient(circle at 80% 80%, rgba(157, 78, 221, 0.04) 0%, transparent 45%),
+        linear-gradient(rgba(255, 255, 255, 0.012) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(255, 255, 255, 0.012) 1px, transparent 1px);
+    background-size: 100% 100%, 100% 100%, 64px 64px, 64px 64px;
+    background-position: 0 0, 0 0, center center, center center;
+    transition: background-image var(--transition-normal);
+}
+
+.light-theme #bg-canvas {
+    background-image: 
+        radial-gradient(circle at 20% 20%, rgba(2, 132, 199, 0.03) 0%, transparent 45%),
+        radial-gradient(circle at 80% 80%, rgba(124, 58, 237, 0.03) 0%, transparent 45%),
+        linear-gradient(rgba(15, 23, 42, 0.01) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(15, 23, 42, 0.01) 1px, transparent 1px);
 }
 
 ::selection {

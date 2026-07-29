@@ -131,7 +131,7 @@ document.addEventListener('DOMContentLoaded', () => {
         height = canvas.height = window.innerHeight;
     });
     
-    const numParticles = 80;
+    const numParticles = 40;
     const particles = [];
     
     // Mouse interaction states
@@ -158,9 +158,9 @@ document.addEventListener('DOMContentLoaded', () => {
             x: (Math.random() - 0.5) * 2000,
             y: (Math.random() - 0.5) * 2000,
             z: Math.random() * 1000, // Depth
-            vx: (Math.random() - 0.5) * 0.5,
-            vy: (Math.random() - 0.5) * 0.5,
-            vz: Math.random() * 0.8 + 0.2, // Speed moving forward
+            vx: (Math.random() - 0.5) * 0.2,
+            vy: (Math.random() - 0.5) * 0.2,
+            vz: Math.random() * 0.4 + 0.1, // Slower motion
             colorType: Math.random() > 0.5 ? 'accent1' : 'accent2'
         });
     }
@@ -172,8 +172,6 @@ document.addEventListener('DOMContentLoaded', () => {
         const isDark = document.body.classList.contains('dark-theme');
         
         // Define colors based on active theme
-        // Accent 1: Cyan (Dark) / Blue (Light)
-        // Accent 2: Purple (Dark) / Light Purple (Light)
         const colorAccent1 = isDark ? [0, 242, 254] : [2, 132, 199];
         const colorAccent2 = isDark ? [157, 78, 221] : [124, 58, 237];
         
@@ -202,12 +200,12 @@ document.addEventListener('DOMContentLoaded', () => {
             
             // Project 3D coordinates onto 2D viewport
             // Include a parallax offset based on depth (z)
-            const px = (p.x / p.z) * scale + width / 2 - (mouseX * 150 * (1 - p.z / 1000));
-            const py = (p.y / p.z) * scale + height / 2 - (mouseY * 150 * (1 - p.z / 1000));
+            const px = (p.x / p.z) * scale + width / 2 - (mouseX * 120 * (1 - p.z / 1000));
+            const py = (p.y / p.z) * scale + height / 2 - (mouseY * 120 * (1 - p.z / 1000));
             
-            // Size & opacity based on Z depth
-            const radius = Math.max(0.1, (1 - p.z / 1000) * 3);
-            const opacity = Math.max(0.01, (1 - p.z / 1000) * 0.25);
+            // Size & opacity based on Z depth (Subtle, professional sizes)
+            const radius = Math.max(0.1, (1 - p.z / 1000) * 2);
+            const opacity = Math.max(0.01, (1 - p.z / 1000) * 0.12);
             
             projected.push({
                 x: px,
@@ -217,34 +215,6 @@ document.addEventListener('DOMContentLoaded', () => {
                 opacity: opacity,
                 color: p.colorType === 'accent1' ? colorAccent1 : colorAccent2
             });
-        }
-        
-        // Draw connection lines in 3D depth range
-        for (let i = 0; i < projected.length; i++) {
-            const p1 = projected[i];
-            if (p1.x < 0 || p1.x > width || p1.y < 0 || p1.y > height) continue;
-            
-            for (let j = i + 1; j < projected.length; j++) {
-                const p2 = projected[j];
-                
-                // Only connect points close in 3D depth and viewport space
-                const depthDiff = Math.abs(p1.z - p2.z);
-                if (depthDiff > 100) continue;
-                
-                const dx = p1.x - p2.x;
-                const dy = p1.y - p2.y;
-                const dist = Math.sqrt(dx * dx + dy * dy);
-                
-                if (dist < 120) {
-                    const lineOpacity = (1 - dist / 120) * 0.08 * (1 - (p1.z + p2.z) / 2000);
-                    ctx.beginPath();
-                    ctx.moveTo(p1.x, p1.y);
-                    ctx.lineTo(p2.x, p2.y);
-                    ctx.strokeStyle = `rgba(${(p1.color[0] + p2.color[0])/2}, ${(p1.color[1] + p2.color[1])/2}, ${(p1.color[2] + p2.color[2])/2}, ${lineOpacity})`;
-                    ctx.lineWidth = 0.5;
-                    ctx.stroke();
-                }
-            }
         }
         
         // Draw particles
